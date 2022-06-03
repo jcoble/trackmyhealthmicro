@@ -2,6 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using ServiceStack;
 using ServiceStack.Caching;
 using ServiceStack.Auth;
+using ServiceStack.DataAnnotations;
 using ServiceStack.FluentValidation;
 
 [assembly: HostingStartup(typeof(trackmyhealthmicro.ConfigureAuth))]
@@ -11,6 +12,8 @@ namespace trackmyhealthmicro
     // Add any additional metadata properties you want to store in the Users Typed Session
     public class CustomUserSession : AuthUserSession 
     {
+        [AutoId]
+        private Guid SessionId { get; set; }
     }
     
     // Custom Validator to add custom validators to built-in /register Service requiring DisplayName and ConfirmPassword

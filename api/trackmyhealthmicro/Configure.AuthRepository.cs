@@ -1,8 +1,10 @@
+using System.Diagnostics.CodeAnalysis;
 using ServiceStack;
 using ServiceStack.Web;
 using ServiceStack.Data;
 using ServiceStack.Auth;
 using ServiceStack.Configuration;
+using ServiceStack.DataAnnotations;
 
 [assembly: HostingStartup(typeof(trackmyhealthmicro.ConfigureAuthRepository))]
 
@@ -11,6 +13,7 @@ namespace trackmyhealthmicro
     // Custom User Table with extended Metadata properties
     public class AppUser : UserAuth
     {
+        public Guid AppUserAuthId { get; set; } = new();
         public string? ProfileUrl { get; set; }
         public string? LastLoginIp { get; set; }
         public DateTime? LastLoginDate { get; set; }
