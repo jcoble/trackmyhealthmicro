@@ -5,35 +5,38 @@ using ServiceStack.Data;
 using ServiceStack.DataAnnotations;
 using ServiceStack.OrmLite;
 
-[assembly: HostingStartup(typeof(trackmyhealthmicro.ConfigureDb))]
+[assembly: HostingStartup(typeof(ConfigureDb))]
 
-namespace trackmyhealthmicro
+namespace trackmyhealthmicro;
+// Example Data Model
+// public class MyTable
+// {
+//     [AutoIncrement]
+//     public int Id { get; set; }
+//     public string Name { get; set; }
+// }
+
+public class ConfigureDb : IHostingStartup
 {
-    // Example Data Model
-    // public class MyTable
-    // {
-    //     [AutoIncrement]
-    //     public int Id { get; set; }
-    //     public string Name { get; set; }
-    // }
-
-    public class ConfigureDb : IHostingStartup
+    public void Configure(IWebHostBuilder builder)
     {
-        public void Configure(IWebHostBuilder builder) => builder
-            .ConfigureServices((context, services) => {
+        builder
+            .ConfigureServices((context, services) =>
+            {
                 services.AddSingleton<IDbConnectionFactory>(new OrmLiteConnectionFactory(
                     context.Configuration.GetConnectionString("DefaultConnection")
-                    ?? "Server=localhost;User Id=test;Password=test;Database=test;Pooling=true;MinPoolSize=0;MaxPoolSize=200",
+                    ??
+                    "Server=localhost;Port=5432;User Id=postgres;Password=1111;Database=track_my_health;Pooling=true;MinPoolSize=0;MaxPoolSize=200",
                     PostgreSqlDialect.Provider));
             });
-            /* Create non-existing Table and add Seed Data Example
-            .ConfigureAppHost(appHost => {
-                using var db = appHost.Resolve<IDbConnectionFactory>().Open();
-                if (db.CreateTableIfNotExists<MyTable>())
-                {
-                    db.Insert(new MyTable { Name = "Seed Data for new MyTable" });
-                }
-            });
-            */
     }
+    /* Create non-existing Table and add Seed Data Example
+    .ConfigureAppHost(appHost => {
+        using var db = appHost.Resolve<IDbConnectionFactory>().Open();
+        if (db.CreateTableIfNotExists<MyTable>())
+        {
+            db.Insert(new MyTable { Name = "Seed Data for new MyTable" });
+        }
+    });
+    */
 }
