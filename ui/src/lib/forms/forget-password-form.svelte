@@ -1,6 +1,6 @@
 <script>
 	import Input from '$lib/elements/input.svelte';
-	import { auth } from '../../utils/nhost';
+	// import { auth } from '../../utils/nhost';
 
 	let error;
 	let email = '';

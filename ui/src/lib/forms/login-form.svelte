@@ -1,6 +1,6 @@
 <script type="ts">
 	import { goto } from '$app/navigation';
-	import { auth } from '../../utils/nhost';
+	// import { auth } from '../../utils/nhost';
 	import Input from '$lib/elements/input.svelte';
 	import { parseError, includesAnyFieldNames } from '$lib/utility/utilityFunctions';
 	import type { ErrorResponse } from '$lib/utility/types';

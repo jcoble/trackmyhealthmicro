@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using ServiceStack;
 using ServiceStack.Web;
 using ServiceStack.Data;
 using ServiceStack.Auth;
@@ -42,7 +41,7 @@ public class ConfigureAuthRepository : IHostingStartup
     {
         builder
             .ConfigureServices(services => services.AddSingleton<IAuthRepository>(c =>
-                new OrmLiteAuthRepository<AppUser, UserAuthDetails>(c.Resolve<IDbConnectionFactory>())
+                new OrmLiteAuthRepository<AppUser, ServiceStack.Auth.UserAuthDetails>(c.Resolve<IDbConnectionFactory>())
                 {
                     UseDistinctRoleTables = true
                 }))
