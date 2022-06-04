@@ -1,26 +1,11 @@
-🌞
 <script>
   import { onMount } from "svelte";
   import { themeChange } from "theme-change";
-  // let theme = '';
-  // (function() {
-  // 	const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  // 	const setting = localStorage.getItem('data-choose-theme') || 'auto'
-  // 	if (setting === 'dark' || (prefersDark && setting !== 'light'))
-  // 		document.documentElement.classList.toggle('dark', true)
-  // 	else if (setting === '' && window.matchMedia('(prefers-color-scheme: light)').matches)
-  // 		document.documentElement.classList.toggle('dark', true)
-  // })()
-
-
   // NOTE: the element that is using one of the theme attributes must be in the DOM on mount
   onMount(() => {
     themeChange(false);
   });
-
-
 </script>
-
 
 <div class="navbar mb-2 shadow-lg rounded-box">
   <div class="flex-none px-2 mx-2"><span class="text-lg font-bold"> daisyUI </span></div>
@@ -80,7 +65,3 @@
     </button>
   </div>
 </div>
-
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
