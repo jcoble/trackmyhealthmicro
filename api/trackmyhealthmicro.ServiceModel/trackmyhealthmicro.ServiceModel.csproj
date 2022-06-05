@@ -15,4 +15,8 @@
     <Folder Include="Types\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Bookings.cs" />
+  </ItemGroup>
+
 </Project>
