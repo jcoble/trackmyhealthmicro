@@ -1,6 +1,5 @@
 <script type="ts">
     import {goto} from '$app/navigation';
-    import {auth} from '../../utils/nhost';
     // import Input from '$lib/elements/input.svelte';
     // import { parseError, includesAnyFieldNames } from '$lib/utility/utilityFunctions';
     // import type { ErrorResponse } from '$lib/utility/types';
@@ -10,17 +9,14 @@
     let email;
     let password;
 
-    function prefill()
-    {
+    function prefill() {
         email = 'coble.jesse@gmail.com';
         name = 'Jesse';
         password = '111111Jc!';
     }
 
-    async function submit()
-    {
-        try
-        {
+    async function submit() {
+        try {
             errorField = '';
             // const { error } = await new register() auth({
             // 	email,
@@ -36,9 +32,7 @@
             // }
 
             // goto('/profile');
-        }
-        catch (e)
-        {
+        } catch (e) {
             // displayError(e);
         }
     }

@@ -12,7 +12,6 @@ namespace trackmyhealthmicro;
 // Custom User Table with extended Metadata properties
 public class AppUser : UserAuth
 {
-    public Guid AppUserAuthId { get; set; } = new();
     public string? ProfileUrl { get; set; }
     public string? LastLoginIp { get; set; }
     public DateTime? LastLoginDate { get; set; }
@@ -41,7 +40,7 @@ public class ConfigureAuthRepository : IHostingStartup
     {
         builder
             .ConfigureServices(services => services.AddSingleton<IAuthRepository>(c =>
-                new OrmLiteAuthRepository<AppUser, ServiceStack.Auth.UserAuthDetails>(c.Resolve<IDbConnectionFactory>())
+                new OrmLiteAuthRepository<AppUser, UserAuthDetails>(c.Resolve<IDbConnectionFactory>())
                 {
                     UseDistinctRoleTables = true
                 }))

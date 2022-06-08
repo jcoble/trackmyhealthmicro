@@ -1054,6 +1054,54 @@ public class UpdateTreatmentScheduledEvents
 public class UpdateUserAuthDetails
     : IReturn<IdResponse>, IPut, IUpdateDb<UserAuthDetails>
 {
+    public UpdateUserAuthDetails(int id, int userAuthId, string provider, string userId, string userName,
+        string fullName, string displayName, string firstName, string lastName, string company, string email,
+        string phoneNumber, DateTime? birthDate, string birthDateRaw, string address, string address2, string city,
+        string state, string country, string culture, string gender, string language, string mailAddress,
+        string nickname, string postalCode, string timeZone, string refreshToken, DateTime? refreshTokenExpiry,
+        string requestToken, string requestTokenSecret, string items, string accessToken, string accessTokenSecret,
+        DateTime createdDate, DateTime modifiedDate, int? refId, string refIdStr, string meta)
+    {
+        Id = id;
+        UserAuthId = userAuthId;
+        Provider = provider;
+        UserId = userId;
+        UserName = userName;
+        FullName = fullName;
+        DisplayName = displayName;
+        FirstName = firstName;
+        LastName = lastName;
+        Company = company;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        BirthDate = birthDate;
+        BirthDateRaw = birthDateRaw;
+        Address = address;
+        Address2 = address2;
+        City = city;
+        State = state;
+        Country = country;
+        Culture = culture;
+        Gender = gender;
+        Language = language;
+        MailAddress = mailAddress;
+        Nickname = nickname;
+        PostalCode = postalCode;
+        TimeZone = timeZone;
+        RefreshToken = refreshToken;
+        RefreshTokenExpiry = refreshTokenExpiry;
+        RequestToken = requestToken;
+        RequestTokenSecret = requestTokenSecret;
+        Items = items;
+        AccessToken = accessToken;
+        AccessTokenSecret = accessTokenSecret;
+        CreatedDate = createdDate;
+        ModifiedDate = modifiedDate;
+        RefId = refId;
+        RefIdStr = refIdStr;
+        Meta = meta;
+    }
+
     public int Id { get; set; }
     public int UserAuthId { get; set; }
     public string Provider { get; set; }

@@ -63,8 +63,8 @@ COMMENT ON EXTENSION citext IS 'data type for case-insensitive character strings
 CREATE DOMAIN public.public AS public.citext
     CONSTRAINT email_check CHECK ((VALUE OPERATOR(public.~) '^[a-zA-Z0-9.!#$%&''*+\=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$'::public.citext));
 
--- IF NOT EXISTS CREATE role postgres ;
--- ALTER DOMAIN public.public OWNER TO postgres;
+IF NOT EXISTS CREATE role postgres ;
+ALTER DOMAIN public.public OWNER TO postgres;
 
 --
 -- TOC entry 292 (class 1255 OID 16855)

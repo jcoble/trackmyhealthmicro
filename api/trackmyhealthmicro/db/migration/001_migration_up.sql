@@ -1109,6 +1109,22 @@ CREATE INDEX idx_treatments_deleted_at ON public.treatments USING btree (deleted
 CREATE TRIGGER check_default_bucket_delete BEFORE DELETE ON public.buckets FOR EACH ROW EXECUTE FUNCTION public.protect_default_bucket_delete();
 
 
+CREATE FUNCTION public.set_app_user_id() RETURNS trigger
+    LANGUAGE plpgsql
+AS $$
+
+DECLARE
+    _new RECORD;
+
+BEGIN
+    _new := new;
+
+    _new.app_user_auth_id = gen_random_uuid();
+
+    RETURN _new;
+END;
+$$;
+
 --
 -- TOC entry 2664 (class 2620 OID 16737)
 -- Name: buckets check_default_bucket_update; Type: TRIGGER; Schema: public; Owner: postgres
