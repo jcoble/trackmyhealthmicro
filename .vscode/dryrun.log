@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/jcmac/mainrepos/trackmyhealthmicro'
+make: Leaving directory `/Users/jcmac/mainrepos/trackmyhealthmicro'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
