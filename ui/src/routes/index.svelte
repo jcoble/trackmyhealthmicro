@@ -1,10 +1,16 @@
 <script>
     import {Parallax, ParallaxLayer} from 'svelte-parallax'
+    import {fade, fly} from 'svelte/transition'
+    import {onMount} from "svelte";
 
     let parallax;
+    export let visible;
+    onMount(() => {
+        visible = true;
+    });
     // let disabled = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
+    // const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
     const url2 = '/'
 </script>
 
@@ -16,7 +22,7 @@
                    style="background-image: url('/star-6.7s-1084px (1).svg') ; background-size: auto; opacity:.2"/>
 
     <ParallaxLayer offset=1.3 rate=-0.3>
-        <img src='/health-symbolorig.svg' alt='' style="width: 25%; margin-left: 70%;">
+        <img src='/health-symbolorig.svg' alt='' style="width: 25%; margin-left: 10%;">
     </ParallaxLayer>
 
     <ParallaxLayer offset=1 rate=0.8 style="opacity: 0.1;">
@@ -53,7 +59,7 @@
     </ParallaxLayer>
 
     <ParallaxLayer offset=2.5 rate=-0.4 style="display: flex; align-items: center; justify-content: center;">
-        <img src='/measurements/pulse-svgrepo-com (1).svg' alt='' style="width: 60%;">
+        <img src='/measurements/pulse-svgrepo-com (1).svg' alt='' class="w-46 md:w-72">
     </ParallaxLayer>
 
     <ParallaxLayer
@@ -61,14 +67,14 @@
             rate=-0.3
             style="display: flex; align-items: center; justify-content: center;"
     >
-        <img src='/measurements/blood-drop-svgrepo-com.svg' alt='' style="height: 40%; width: 40%; opacity: .5">
+        <img src='/measurements/blood-drop-svgrepo-com.svg' alt='' style="height: 40%; max-width: 40%; opacity: .5;">
     </ParallaxLayer>
 
 
     <ParallaxLayer
             offset=0
             rate=.6
-            style="top: -200px; display: flex; align-items: center; justify-content: center;"
+            style="top: -240px; display: flex; align-items: center; justify-content: center;"
     >
         <div class="flex flex-col items-center text-center">
             <p class="text-white text-6xl tracking-tight font-serif leading-none mb-10">Track My Health</p>
@@ -77,22 +83,87 @@
 
     </ParallaxLayer>
 
+    <!--    <ParallaxLayer-->
+    <!--            offset=.2-->
+    <!--            rate=.6-->
+    <!--            class="text-center "-->
+    <!--            style="display: flex; align-items: center; justify-content: center;"-->
+    <!--    >-->
+    <!--        <p class="pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600 text-4xl md:text-5xl font-extrabold tracking-tight font-serif leading-none">-->
+    <!--            <a href="/signup">Sign Up</a>-->
+    <!--        </p>-->
+    <!--        <p class="ml-2 pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600 text-4xl md:text-5xl font-extrabold tracking-tight font-serif leading-none">-->
+    <!--            Or-->
+    <!--        </p>-->
+    <!--        <p class="ml-2 pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600 text-4xl md:text-5xl font-extrabold tracking-tight font-serif leading-none">-->
+    <!--            <a href="/signin">Sign In</a>-->
+    <!--        </p>-->
+    <!--    </ParallaxLayer>-->
+
+    <!--    <ParallaxLayer-->
+    <!--            offset=0-->
+    <!--            rate=0.3-->
+    <!--            class="w-[12rem] md:h-72 w-[12rem] md:h-72"-->
+    <!--            style="display: flex; flex-direction: column; flex-flow: column; align-items: flex-end; "-->
+    <!--    >-->
+    <!--        <img-->
+    <!--                src='/health-main.svg'-->
+    <!--                alt=''-->
+    <!--                class="server w-[12rem] md:w-72 "-->
+    <!--                style="cursor: pointer; align-self: flex-end;"-->
+    <!--                on:click={() => parallax.scrollTo(2, {selector: '.bash'})}-->
+    <!--                on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(2, {selector: '.bash'})}-->
+    <!--                tabindex=1-->
+    <!--        >-->
+    <!--    </ParallaxLayer>-->
+
+
     <ParallaxLayer
-            offset=0
+            offset=.1
             rate=0.1
-            style="display: flex; align-items: center; justify-content: center;"
+
+            style="display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-evenly;
+                align-items: center;"
+
     >
+        {#if visible}
+            <div transition:fly={{ y: 200, duration: 2000 }}
+                 on:click={() => parallax.scrollTo(2, {selector: '.bash'})}
+                 on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(2, {selector: '.bash'})}
+                 tabindex=0>
+                <svg style="cursor: pointer;" class="server w-[12rem] md:w-36 stroke-cyan-500 fill-cyan-500"
+                     width="100%"
+                     height="100%"
+                     viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.61 21.74C11.5115 21.7405 11.4138 21.7212 11.3228 21.6835C11.2318 21.6457 11.1492 21.5901 11.08 21.52L3.08 13.52C2.97524 13.4151 2.90392 13.2815 2.87503 13.1361C2.84615 12.9907 2.861 12.84 2.91771 12.7031C2.97442 12.5661 3.07045 12.449 3.19366 12.3666C3.31688 12.2842 3.46176 12.2401 3.61 12.24H6.92V3C6.92259 2.80189 7.00244 2.61263 7.14253 2.47253C7.28263 2.33244 7.47189 2.25259 7.67 2.25H15.67C15.8689 2.25 16.0597 2.32902 16.2003 2.46967C16.341 2.61032 16.42 2.80109 16.42 3V12.25H19.61C19.7613 12.2448 19.9103 12.2874 20.036 12.3718C20.1617 12.4562 20.2575 12.578 20.31 12.72C20.3668 12.8556 20.382 13.0051 20.3535 13.1494C20.325 13.2937 20.2541 13.4262 20.15 13.53L12.15 21.53C12.0791 21.6 11.9946 21.6548 11.9017 21.6909C11.8089 21.727 11.7096 21.7437 11.61 21.74ZM5.44 13.74L11.61 19.91L17.79 13.73H15.68C15.4809 13.7275 15.2906 13.648 15.1489 13.5081C15.0072 13.3683 14.9252 13.179 14.92 12.98V3.76H8.42V13C8.42 13.1989 8.34098 13.3897 8.20033 13.5303C8.05967 13.671 7.86891 13.75 7.67 13.75L5.44 13.74Z"
+                    />
+                </svg>
 
+            </div>
+        {/if}
+        <!--        <img-->
+        <!--                src='/arrow-down-svgrepo-com.svg'-->
+        <!--                alt=''-->
+        <!--                class="server w-[12rem] md:w-24 stroke-cyan-500"-->
+        <!--                style="cursor: pointer;"-->
+        <!--                on:click={() => parallax.scrollTo(2, {selector: '.bash'})}-->
+        <!--                on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(2, {selector: '.bash'})}-->
+        <!--                tabindex=0-->
+        <!--        >-->
+        <div class="text-center mt-10">
+            <p class="pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600 text-4xl md:text-5xl font-extrabold tracking-tight font-serif leading-none">
+                <a href="/signup">Sign Up</a>
+            </p>
+            <p class="ml-2 pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-200 to-pink-200 text-2xl md:text-3xl font-extrabold tracking-tight font-serif leading-none">
+                Or
+            </p>
+            <p class="ml-2 pb-3 text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-pink-600 text-4xl md:text-5xl font-extrabold tracking-tight font-serif leading-none">
+                <a href="/signin">Sign In</a>
+            </p>
+        </div>
 
-        <img
-                src='/health-main.svg'
-                alt=''
-                class="server"
-                style="width: 40%;"
-                on:click={() => parallax.scrollTo(2, {selector: '.bash'})}
-                on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(2, {selector: '.bash'})}
-                tabindex=0
-        >
     </ParallaxLayer>
 
 
@@ -133,17 +204,7 @@
                     <path d="M441.3533,41.1183H255.573A31.2327,31.2327,0,0,0,224.3406,72.351v145.8H197.3879a6,6,0,0,0,0,12h26.9527V439.6491a31.2326,31.2326,0,0,0,31.2324,31.2326h185.78a31.2327,31.2327,0,0,0,31.2329-31.2326V72.351A31.2328,31.2328,0,0,0,441.3533,41.1183ZM366.88,56.7351h11.29a6,6,0,0,1,0,12H366.88a6,6,0,0,1,0-12Zm-48.124,0h28.2256a6,6,0,0,1,0,12H318.7561a6,6,0,0,1,0-12ZM456.198,435.2592a17.95,17.95,0,0,1-17.95,17.95H258.679a17.95,17.95,0,0,1-17.95-17.95V230.1513h31.13a75.8218,75.8218,0,0,0,150.73-4.3657,6,6,0,1,0-11.9648-.9112,63.83,63.83,0,1,1-63.6426-68.7471,6,6,0,0,0,0-12A75.9022,75.9022,0,0,0,271.2,218.1513H240.7288V101.4331a17.95,17.95,0,0,1,17.95-17.95H438.2478a17.95,17.95,0,0,1,17.95,17.95Z"/>
                 </g>
             </svg>
-
         </div>
-        <!--        <img-->
-        <!--                src='/meds/monitor-meds.svg'-->
-        <!--                alt=''-->
-        <!--                class="bash stroke-white"-->
-        <!--                style="width: 40%;"-->
-        <!--                on:click={() => parallax.scrollTo(3, {selector: '.clients-main'})}-->
-        <!--                on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(3, {selector: '.clients-main'})}-->
-        <!--                tabindex=0-->
-        <!--        />-->
     </ParallaxLayer>
 
     <ParallaxLayer
@@ -168,8 +229,7 @@
         <img
                 src='/measurements/pulse-svgrepo-com (3).svg'
                 alt=''
-                class="clients-main"
-                style="width: 40%;"
+                class="clients-main w-36 md:w-60"
                 on:click={() => parallax.scrollTo(1, {selector: '.server'})}
                 on:keyup={(e) => e.key === 'Enter' && parallax.scrollTo(1, {selector: '.server'})}
                 tabindex=0
