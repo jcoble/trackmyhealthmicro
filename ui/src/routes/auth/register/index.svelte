@@ -1,14 +1,14 @@
 <script lang="ts">
     import {splitOnFirst, toPascalCase} from '@servicestack/client';
-
     import CheckBox from '$elements/CheckBox.svelte';
     import ErrorSummary from '$elements/ErrorSummary.svelte';
     import {client, redirect, checkAuth} from '$shared';
-    import signin from '$forms/SignIn.svelte'
-    import signup from '$forms/SignUp.svelte'
+    import signin from '$routes/auth/SignIn.svelte'
+    import signup from '$routes/auth/SignUp.svelte'
     import {Register} from '$shared/dtos';
     import classNames from "classnames";
     import Input from "$elements/Input.svelte";
+    import ButtonSpinner from "$elements/ButtonSpinner.svelte";
 
     let loading = false;
     let responseStatus = null;
@@ -75,12 +75,12 @@
                        responseStatus={responseStatus}/>
             </div>
             <div class="mb-3">
-                <CheckBox name="autoLogin" bind:checked={autoLogin} responseStatus={responseStatus}>
+                <CheckBox id="autoLogin" name="autoLogin" bind:checked={autoLogin} responseStatus={responseStatus}>
                     Auto Login
                 </CheckBox>
             </div>
             <div class="mb-3">
-                <button class="btn btn-lg btn-primary" type="submit">Register</button>
+                <ButtonSpinner loading={loading} class="btn btn-lg btn-primary" type="submit">Register</ButtonSpinner>
             </div>
             <div class="pt-3">
                 <b>Quick Populate:</b>
