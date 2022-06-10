@@ -1,0 +1,1 @@
+import{_ as t,r as c,c as r,a as o,o as s}from"./app.bac93db2.js";const a={},n={class:"h-screen px-4 text-black bg-white text-center flex flex-col items-center justify-center"};function _(i,m){const e=c("router-view");return s(),r("main",n,[o(e)])}var f=t(a,[["render",_],["__file","/Users/jcmac/mainrepos/trackmyhealthmicro/ui/src/layouts/empty.vue"]]);export{f as default};

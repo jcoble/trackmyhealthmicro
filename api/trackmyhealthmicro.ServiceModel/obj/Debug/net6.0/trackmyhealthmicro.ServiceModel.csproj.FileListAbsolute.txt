@@ -1,0 +1,12 @@
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/bin/Debug/net6.0/trackmyhealthmicro.ServiceModel.deps.json
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/bin/Debug/net6.0/trackmyhealthmicro.ServiceModel.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/bin/Debug/net6.0/trackmyhealthmicro.ServiceModel.pdb
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.csproj.AssemblyReference.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.AssemblyInfoInputs.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.AssemblyInfo.cs
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.csproj.CoreCompileInputs.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/refint/trackmyhealthmicro.ServiceModel.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/trackmyhealthmicro.ServiceModel.pdb
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/Debug/net6.0/ref/trackmyhealthmicro.ServiceModel.dll

@@ -1,0 +1,217 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.Tests/trackmyhealthmicro.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/trackmyhealthmicro.ServiceInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/trackmyhealthmicro.ServiceInterface.csproj",
+        "projectName": "trackmyhealthmicro.ServiceInterface",
+        "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/trackmyhealthmicro.ServiceInterface.csproj",
+        "packagesPath": "/Users/jcmac/.nuget/packages/",
+        "outputPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jcmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj": {
+                "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj",
+        "projectName": "trackmyhealthmicro.ServiceModel",
+        "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj",
+        "packagesPath": "/Users/jcmac/.nuget/packages/",
+        "outputPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jcmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "ServiceStack.Client": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.Tests/trackmyhealthmicro.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.Tests/trackmyhealthmicro.Tests.csproj",
+        "projectName": "trackmyhealthmicro.Tests",
+        "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.Tests/trackmyhealthmicro.Tests.csproj",
+        "packagesPath": "/Users/jcmac/.nuget/packages/",
+        "outputPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jcmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/trackmyhealthmicro.ServiceInterface.csproj": {
+                "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/trackmyhealthmicro.ServiceInterface.csproj"
+              },
+              "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj": {
+                "projectPath": "/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceModel/trackmyhealthmicro.ServiceModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.*, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.*, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.1.*, )"
+            },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[6.*, )"
+            },
+            "ServiceStack.Kestrel": {
+              "target": "Package",
+              "version": "[6.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

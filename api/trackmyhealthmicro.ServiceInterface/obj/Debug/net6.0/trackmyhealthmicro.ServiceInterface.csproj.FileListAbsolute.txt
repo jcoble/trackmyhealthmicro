@@ -1,0 +1,15 @@
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/bin/Debug/net6.0/trackmyhealthmicro.ServiceInterface.deps.json
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/bin/Debug/net6.0/trackmyhealthmicro.ServiceInterface.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/bin/Debug/net6.0/trackmyhealthmicro.ServiceInterface.pdb
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/bin/Debug/net6.0/trackmyhealthmicro.ServiceModel.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/bin/Debug/net6.0/trackmyhealthmicro.ServiceModel.pdb
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.csproj.AssemblyReference.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.AssemblyInfoInputs.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.AssemblyInfo.cs
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.csproj.CoreCompileInputs.cache
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.csproj.CopyComplete
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/refint/trackmyhealthmicro.ServiceInterface.dll
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/trackmyhealthmicro.ServiceInterface.pdb
+/Users/jcmac/mainrepos/trackmyhealthmicro/api/trackmyhealthmicro.ServiceInterface/obj/Debug/net6.0/ref/trackmyhealthmicro.ServiceInterface.dll

@@ -10,6 +10,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
     app.UseHttpsRedirection();
 }
-app.UseServiceStack(new AppHost());
 
+app.UseServiceStack(new AppHost());
+Licensing.RegisterLicense("license");
 app.Run();

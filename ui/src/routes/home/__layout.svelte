@@ -2,11 +2,9 @@
     import "../app.css";
 </script>
 
-<slot/>
-
 <div class="drawer drawer-mobile">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle"/>
-    <div class="drawer-content flex flex-col items-center justify-center linear-gradient(to right bottom, rgb(134, 239, 172), rgb(59, 130, 246), rgb(147, 51, 234))">
+    <div class="drawer-content flex flex-col items-center  justify-center bg-gradient-to-r from-green-200 via-green-400 to-purple-700">
         <!-- Page content here -->
         <slot/>
         <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>

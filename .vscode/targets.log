@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Wed Jun  8 04:53:34 2022
+# Make data base, printed on Thu Jun  9 13:16:44 2022
 
 # Variables
 
@@ -47,17 +44,13 @@ __CFBundleIdentifier = com.microsoft.VSCodeInsiders
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/pr/t9t1bbc955q5q0gr26ffg5lr0000gn/T/vscode-ipc-c86ab8a4-2f10-4bdc-910b-b35c05ebd9e4.sock
-# environment
-MallocSpaceEfficient = 1
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/pr/t9t1bbc955q5q0gr26ffg5lr0000gn/T/vscode-ipc-9fc97a0b-35b4-4d27-b439-47521b05d547.sock
 # environment
 VSCODE_CWD = /
 # environment
 PATH = /Users/jcmac/.nvm/versions/node/v18.3.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/jcmac/.dotnet/tools:/Users/jcmac/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/Users/jcmac/google-cloud-sdk/bin
 # environment
 NVM_BIN = /Users/jcmac/.nvm/versions/node/v18.3.0/bin
-# environment
-LaunchInstanceID = 02D9E503-90A6-4B6D-9465-DFFB5A998341
 # environment
 VSCODE_LOG_STACK = true
 # environment
@@ -67,11 +60,11 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 CLOUDSDK_METRICS_ENVIRONMENT = cloudcode.vscode
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ZTN0kyWScA/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.23U7ljTQXI/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-CLOUDSDK_METRICS_ENVIRONMENT_VERSION = 1.18.2
+CLOUDSDK_METRICS_ENVIRONMENT_VERSION = 1.18.3
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -89,7 +82,7 @@ HOME = /Users/jcmac
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jcmac/Library/Application Support/Code - Insiders/CachedData/2260d7cca34384a2838c728850afdd38113ddb47
+VSCODE_CODE_CACHE_PATH = /Users/jcmac/Library/Application Support/Code - Insiders/CachedData/87630a9122f88f5062fe9964839a92116c274a86
 # environment
 LOGNAME = jcmac
 # environment
@@ -135,7 +128,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/jcmac/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.1795778.1795784
+XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.4637472.4637478
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -165,9 +158,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 50471
+VSCODE_PID = 5119
 # variable set hash-table stats:
-# Load=76/1024=7%, Rehash=0, Collisions=1/97=1%
+# Load=74/1024=7%, Rehash=0, Collisions=1/95=1%
 
 # Pattern-specific Variable Values
 
@@ -175,9 +168,9 @@ VSCODE_PID = 50471
 
 # Directories
 
-# . (device 16777234, inode 2851311): 14 files, no impossibilities.
+# . (device 16777232, inode 2851311): 13 files, no impossibilities.
 
-# 14 files, no impossibilities in 1 directories.
+# 13 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -249,6 +242,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun  8 04:53:34 2022
+# Finished Make data base on Thu Jun  9 13:16:44 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

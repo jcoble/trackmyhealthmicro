@@ -31,7 +31,10 @@ public class ConfigureAutoQuery : IHostingStartup
         builder
             .ConfigureAppHost(appHost =>
             {
-                var ignoreTables = new[] {"SchemaMigrations", ""}; // don't generate AutoCrud APIs for these tables
+                var ignoreTables = new[]
+                {
+                    "SchemaMigrations", "Buckets", "Files", "Migrations"
+                }; // don't generate AutoCrud APIs for these tables
                 appHost.Plugins.Add(new AutoQueryFeature
                 {
                     MaxLimit = 1000

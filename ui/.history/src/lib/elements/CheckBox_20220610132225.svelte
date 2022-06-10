@@ -1,0 +1,39 @@
+<script lang="ts">
+	import { createEventDispatcher } from 'svelte';
+	import { errorResponse, errorResponseExcept } from '@servicestack/client';
+	import classNames from 'classnames';
+
+	export let name = '';
+	export let className = '';
+	export let value = false;
+	export let responseStatus = null;
+	export let size = '3em';
+	export let id = '';
+
+	let errorField = name && errorResponse.call({ responseStatus }, name);
+	let cls = classNames('form-check', { 'is-invalid': errorField, 'form-control': errorField });
+	let clsInput = classNames('form-check-input', { 'is-invalid': errorField }, className || '');
+
+	const dispatch = createEventDispatcher();
+	const handleChange = (e) => {
+		dispatch('change', e.target.checked);
+	};
+</script>
+
+<!--<div class={cls}>-->
+<!--    &lt;!&ndash;    <input type="checkbox" id={name} name={name} bind:checked value="true"&ndash;&gt;-->
+<!--    &lt;!&ndash;           class={clsInput} onChange={handleChange}/>&ndash;&gt;-->
+
+<!--    <input type="checkbox" style={size} id={id} bind:value={clsInput} on:checked={handleChange}/>-->
+<!--</div>-->
+
+<div class="form-control">
+	<label class="label cursor-pointer">
+		<span class="label-text">Remember me</span>
+		<input type="checkbox" checked={value} class="checkbox" />
+	</label>
+</div>
+
+{#if errorField}
+	<div class="invalid-feedback">{errorField}</div>
+{/if}
