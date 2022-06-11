@@ -1,53 +1,36 @@
-<script context='module'>
-    export async function load({session}) {
-        console.log("session", session);
-        if (session.user) {
-            return {
-                status: 302,
-                redirect: '/home'
-            }
-        }
-        return {}
-    }
-</script>
-
 <script lang="ts">
-    import {splitOnFirst, toPascalCase} from '@servicestack/client';
     import CheckBox from '$lib/elements/CheckBox.svelte';
     import ErrorSummary from '$lib/elements/ErrorSummary.svelte';
     import {client, redirect, checkAuth} from '$lib/shared';
     import {Register} from '$lib/shared/dtos';
     import classNames from 'classnames';
-    import Input from '$lib/elements/Input.svelte';
     import TextInput from '$lib/elements/TextInput.svelte';
     import ButtonGlow from '$lib/elements/ButtonGlow.svelte';
     import {ResponseStatus} from '$lib/shared/dtos';
-    import {delay} from '$lib/utils/utilityFunctions';
     import {onMount} from "svelte";
 
     // export let loading = false;
     export let responseStatus: ResponseStatus | null = null;
-
     export let displayName = '';
     export let email = '';
     export let password = '';
     export let confirmPassword = '';
     export let autoLogin = true;
-    let isLoading: boolean = false;
+    export let isLoading: boolean = false;
 
     $: cls = classNames({error: responseStatus, isLoading});
     $: isLoading;
 
-    // onMount(() => {
-    //     async function authCheck() {
-    //         const isLoggedIn = await checkAuth(); //user is already logged in, redirect to  home
-    //         if (isLoggedIn) {
-    //             await redirect('/home');
-    //         }
-    //     }
-    //
-    //     authCheck();
-    // });
+    onMount(() => {
+        async function authCheck() {
+            const isLoggedIn = await checkAuth(); //user is already logged in, redirect to  home
+            if (isLoggedIn) {
+                await redirect('/home');
+            }
+        }
+
+        authCheck();
+    });
 
     const newUser = () => {
         displayName = 'Jesse Coble';
@@ -91,7 +74,7 @@
 <svelte:window on:keydown={handleKeyDown}/>
 
 <svelte:head>
-    <title>Login Form</title>
+    <title>Register Form</title>
     <meta name='robots' content='noindex, nofollow'/>
 </svelte:head>
 
@@ -107,7 +90,7 @@
                     password,
                     confirmPassword"
                     {responseStatus}
-                    class="bg-transparent text-error-content text-error"
+                    className="bg-transparent text-error-content text-error"
             />
         </div>
         <TextInput
@@ -123,7 +106,7 @@
                 placeholder="Full Name"
                 className="mb-5 input-bordered input-accent"
                 type="text"
-                name="displayName"
+                name="DisplayName"
                 bind:value={displayName}
                 {responseStatus}
                 required
@@ -132,7 +115,7 @@
                 placeholder="Password"
                 className="mb-5 input-bordered input-accent"
                 type="password"
-                name="password"
+                name="Password"
                 bind:value={password}
                 {responseStatus}
                 required
@@ -141,12 +124,12 @@
                 placeholder="Confirm Password"
                 className="mb-5 input-bordered input-accent"
                 type="password"
-                name="confirmPassword"
+                name="ConfirmPassword"
                 bind:value={confirmPassword}
                 {responseStatus}
                 required
         />
-        <CheckBox className="checkbox-accent" name="rememberMe" bind:value={autoLogin} required
+        <CheckBox className="checkbox-accent" name="RememberMe" bind:value={autoLogin} required
         >Remember Me
         </CheckBox
         >
