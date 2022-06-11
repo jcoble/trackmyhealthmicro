@@ -5,7 +5,7 @@
     // import type {ErrorResponse} from '$lib/utility/types';
 
     let errorField;
-    let email;
+    let Email;
     let password;
 
     function prefill() {
@@ -17,7 +17,7 @@
         try {
             errorField = '';
             // const {error} = await auth.signIn({
-            //     email,
+            //     Email,
             //     password
             // });
             //
@@ -43,11 +43,11 @@
     // }
 </script>
 
-<!--{#if errorField && includesAnyFieldNames(['email', 'password'], errorField)}-->
+<!--{#if errorField && includesAnyFieldNames(['Email', 'password'], errorField)}-->
 <!--    <p class="text-red-400 py-2">{errorField}</p>-->
 <!--{/if}-->
 <!--<form class="space-y-2" on:submit|preventDefault={submit}>-->
-<!--    <Input requied label="Email" name="email" type="email" bind:value={email} required/>-->
+<!--    <Input requied label="Email" name="Email" type="Email" bind:value={Email} required/>-->
 <!--    <Input requied label="Password" name="password" type="password" bind:value={password} required/>-->
 <!--    <div class="pt-2">&ndash;&gt;-->
 <!--        <button class="py-2 px-4 text-white bg-gray-700 rounded-md shadow-sm" type="submit">-->

@@ -15,11 +15,11 @@
     let loading = false;
     let responseStatus = null;
     let rememberMe = true;
-    let email = '';
+    let Email = '';
     let password = '';
     let cls = classNames({error: responseStatus, loading});
 
-    const switchUser = (email) => {
+    const switchUser = (Email) => {
         email = email;
         password = 'p@55wOrd';
     };
@@ -56,7 +56,7 @@
 
 <div class="bg-opacity-20 relative z-10 h-auto p-8 py-10 overflow-hidden border-gray-300 shadow-2xl px-7 Login rounded-lg">
     <h3 class="mb-6 text-2xl font-medium text-center">Sign in to your Account</h3>
-    <TextInput placeholder="Email" className="mb-5 input-bordered input-accent" type="email" name="email" value={email}
+    <TextInput placeholder="Email" className="mb-5 input-bordered input-accent" type="Email" name="email" value={email}
                required/>
     <TextInput placeholder="password" className="mb-5 input-bordered input-accent" type="password" name="password"
                value="password" required/>

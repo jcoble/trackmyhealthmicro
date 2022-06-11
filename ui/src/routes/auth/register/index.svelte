@@ -1,3 +1,16 @@
+<script context='module'>
+    export async function load({session}) {
+        console.log("session", session);
+        if (session.user) {
+            return {
+                status: 302,
+                redirect: '/home'
+            }
+        }
+        return {}
+    }
+</script>
+
 <script lang="ts">
     import {splitOnFirst, toPascalCase} from '@servicestack/client';
     import CheckBox from '$lib/elements/CheckBox.svelte';
@@ -10,6 +23,7 @@
     import ButtonGlow from '$lib/elements/ButtonGlow.svelte';
     import {ResponseStatus} from '$lib/shared/dtos';
     import {delay} from '$lib/utils/utilityFunctions';
+    import {onMount} from "svelte";
 
     // export let loading = false;
     export let responseStatus: ResponseStatus | null = null;
@@ -24,58 +38,94 @@
     $: cls = classNames({error: responseStatus, isLoading});
     $: isLoading;
 
-    const newUser = (newEmail) => {
-        const names = newEmail.split('@');
-        displayName = toPascalCase(names[0]) + ' ' + toPascalCase(splitOnFirst(names[1], '.')[0]);
-        email = newEmail;
-        password = confirmPassword = 'p@55wOrd';
+    // onMount(() => {
+    //     async function authCheck() {
+    //         const isLoggedIn = await checkAuth(); //user is already logged in, redirect to  home
+    //         if (isLoggedIn) {
+    //             await redirect('/home');
+    //         }
+    //     }
+    //
+    //     authCheck();
+    // });
+
+    const newUser = () => {
+        displayName = 'Jesse Coble';
+        email = "jc@gmail.com";
+        password = confirmPassword = '111111Jc';
+        autoLogin = true;
     };
 
     const submit = async () => {
         try {
             isLoading = true;
             responseStatus = null;
-            
+
             const response = await client.post(
                 new Register({
                     displayName,
-                    email,
+                    email: email,
                     password,
                     confirmPassword,
                     autoLogin
                 })
             );
-            isLoading = false;
-            if (!response) throw new Error();
-
             await checkAuth();
             isLoading = false;
-            redirect('/home');
+            await redirect('/home');
         } catch (e) {
-            responseStatus = e.responseStatus || e;
+            console.log(e)
             isLoading = false;
+            responseStatus = e.responseStatus || e;
         }
     };
+
+    function handleKeyDown(e) {
+        if (e.keyCode === 13) {
+            submit();
+        }
+        return null
+    }
 </script>
+
+<svelte:window on:keydown={handleKeyDown}/>
+
+<svelte:head>
+    <title>Login Form</title>
+    <meta name='robots' content='noindex, nofollow'/>
+</svelte:head>
+
 <form rel="form" on:submit|preventDefault={submit} class={cls}>
     <div
-            class="relative z-10 h-auto p-8 py-10 overflow-hidden border-gray-300 rounded-lg shadow-2xl bg-opacity-20 px-7 Login"
+            class="relative z-10 h-auto p-8 py-10 overflow-hidden border-gray-300 rounded-lg shadow-2xl  px-7 "
     >
-        <h3 class="mb-6 text-2xl font-medium text-center">Sign up your Account</h3>
+        <h3 class="mb-6 text-2xl  text-center">Sign up for your Account</h3>
+        <div class="mb-3">
+            <ErrorSummary
+                    except="displayName,
+                    email,
+                    password,
+                    confirmPassword"
+                    {responseStatus}
+                    class="bg-transparent text-error-content text-error"
+            />
+        </div>
         <TextInput
                 placeholder="Email"
-                className="mb-5 input-bordered input-accent"
+                className="mb-5 input-bordered input-accent "
                 type="email"
-                name="email"
-                value={email}
+                name="Email"
+                bind:value={email}
+                {responseStatus}
                 required
         />
         <TextInput
                 placeholder="Full Name"
                 className="mb-5 input-bordered input-accent"
-                type="displayName"
+                type="text"
                 name="displayName"
-                value={displayName}
+                bind:value={displayName}
+                {responseStatus}
                 required
         />
         <TextInput
@@ -83,15 +133,17 @@
                 className="mb-5 input-bordered input-accent"
                 type="password"
                 name="password"
-                value={password}
+                bind:value={password}
+                {responseStatus}
                 required
         />
         <TextInput
                 placeholder="Confirm Password"
                 className="mb-5 input-bordered input-accent"
-                type="confirmPassword"
+                type="password"
                 name="confirmPassword"
-                value={confirmPassword}
+                bind:value={confirmPassword}
+                {responseStatus}
                 required
         />
         <CheckBox className="checkbox-accent" name="rememberMe" bind:value={autoLogin} required
@@ -102,7 +154,6 @@
             <ButtonGlow
                     on:click={submit}
                     type="submit"
-                    checked="checked"
                     class="btn loading"
                     loading={isLoading}
             />
@@ -111,6 +162,9 @@
             Have an account?
             <a href="/auth/login" class="text-blue-500 underline">Sign in here </a>
         </p>
+        <button class="btn btn-outline-info btn-sm" on:click|preventDefault={e => newUser()}>
+            Test
+        </button>
     </div>
 </form>
 <!--<div class="row">-->
@@ -118,14 +172,14 @@
 <!--        <h3>Register New User</h3>-->
 <!--        <form ref="form" on:submit|preventDefault={submit} class={cls}>-->
 <!--            <div class="mb-3">-->
-<!--                <ErrorSummary except="displayName,email,password,confirmPassword" responseStatus={responseStatus}/>-->
+<!--                <ErrorSummary except="displayName,Email,password,confirmPassword" responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
 <!--                <Input name="displayName" bind:value={displayName} placeholder="Display Name"-->
 <!--                       responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
-<!--                <Input name="email" bind:value={email} placeholder="Email" responseStatus={responseStatus}/>-->
+<!--                <Input name="Email" bind:value={Email} placeholder="Email" responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
 <!--                <Input type="password" name="password" bind:value={password} placeholder="Password"-->

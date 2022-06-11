@@ -17,7 +17,7 @@
     let responseStatus = null;
 
     let displayName = '';
-    let email = '';
+    let Email = '';
     let password = '';
     let confirmPassword = '';
     let autoLogin = true;
@@ -60,7 +60,7 @@
 
 <div class="bg-opacity-20 relative z-10 h-auto p-8 py-10 overflow-hidden border-gray-300 shadow-2xl px-7 Login rounded-lg">
     <h3 class="mb-6 text-2xl font-medium text-center">Sign in to your Account</h3>
-    <TextInput placeholder="Email" className="mb-5 input-bordered input-accent" type="email" name="email" value={email}
+    <TextInput placeholder="Email" className="mb-5 input-bordered input-accent" type="Email" name="email" value={email}
                required/>
     <TextInput placeholder="Full Name" className="mb-5 input-bordered input-accent" type="displayName"
                name="displayName"
@@ -83,14 +83,14 @@
 <!--        <h3>Register New User</h3>-->
 <!--        <form ref="form" on:submit|preventDefault={submit} class={cls}>-->
 <!--            <div class="mb-3">-->
-<!--                <ErrorSummary except="displayName,email,password,confirmPassword" responseStatus={responseStatus}/>-->
+<!--                <ErrorSummary except="displayName,Email,password,confirmPassword" responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
 <!--                <Input name="displayName" bind:value={displayName} placeholder="Display Name"-->
 <!--                       responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
-<!--                <Input name="email" bind:value={email} placeholder="Email" responseStatus={responseStatus}/>-->
+<!--                <Input name="Email" bind:value={Email} placeholder="Email" responseStatus={responseStatus}/>-->
 <!--            </div>-->
 <!--            <div class="mb-3">-->
 <!--                <Input type="password" name="password" bind:value={password} placeholder="Password"-->

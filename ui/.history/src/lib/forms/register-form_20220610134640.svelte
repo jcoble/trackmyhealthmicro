@@ -19,7 +19,7 @@
         try {
             errorField = '';
             // const { error } = await new register() auth({
-            // 	email,
+            // 	Email,
             // 	password,
             // 	options: {
             // 		displayName: name
@@ -48,12 +48,12 @@
     // }
 </script>
 
-<!--{#if errorField && includesAnyFieldNames(['email', 'name', 'password'], errorField)}-->
+<!--{#if errorField && includesAnyFieldNames(['Email', 'name', 'password'], errorField)}-->
 <!--	<p class="text-red-400 py-2">{errorField}</p>-->
 <!--{/if}-->
 <!--<form class="space-y-2" on:submit|preventDefault={submit}>-->
 <!--	<Input required label="Name" type="text" bind:value={name} name="name" {errorField} />-->
-<!--	<Input required label="Email" type="email" bind:value={email} name="email" {errorField} />-->
+<!--	<Input required label="Email" type="Email" bind:value={Email} name="Email" {errorField} />-->
 <!--	<Input-->
 <!--		required-->
 <!--		label="Password"-->

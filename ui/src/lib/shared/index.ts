@@ -4,7 +4,7 @@ import {browser} from '$app/env'
 import {JsonServiceClient} from '@servicestack/client';
 import type {Writable} from 'svelte/store';
 import {writable} from 'svelte/store';
-import type {User} from './global'
+import type {User} from './global';
 
 // import {navigate} from 'svelte-routing';
 
@@ -13,7 +13,7 @@ import {goto} from '$app/navigation';
 import {Authenticate, AuthenticateResponse} from './dtos';
 // import {logout, removeCookie} from "./auth";
 
-export var client = new JsonServiceClient('http://localhost:5000/');
+export var client = new JsonServiceClient('http://localhost:5000/api');
 
 export let userSession: Writable<AuthenticateResponse | null>;
 userSession = writable<AuthenticateResponse | null>(null);

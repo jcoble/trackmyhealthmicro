@@ -1,10 +1,7 @@
 <script lang="ts">
-	import '../app.css';
+    import '../app.css';
 
-	// export let caption = '';
+    // export let caption = '';
 </script>
 
-<slot class="bg-accent" />
-
-<style>
-</style>
+<slot/>

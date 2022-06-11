@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { errorResponse, errorResponseExcept } from '@servicestack/client';
+    import {errorResponse, errorResponseExcept} from '@servicestack/client';
 
-	export let except = '';
-	export let responseStatus: boolean | null | undefined = null;
+    export let except = '';
+    export let responseStatus: string[] | null | undefined = null;
 
-	$: errorField = errorResponseExcept.call({ responseStatus }, except);
+    $: errorField = errorResponseExcept.call({responseStatus}, except);
 </script>
 
 {#if errorField}
-	<div class="alert alert-danger mt-2">{errorField}</div>
+    <div class="bg-white text-error-content alert alert-danger mt-2">{errorField}</div>
 {/if}
