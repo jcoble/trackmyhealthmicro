@@ -18,20 +18,6 @@
     };
 </script>
 
-<!-- <div class={cls}>
-	<input
-		type="checkbox"
-		id={name}
-		{name}
-		bind:checked
-		value="true"
-		class="checkbox-accent {{ clsInput }}"
-		onChange={handleChange}
-	/>
-
-	<label class="form-check-label" for={name}><slot /></label>
-</div> -->
-
 <div class="form-control">
     <label class="cursor-pointer label space-evenly" for={name}>
         <span class="label-text"><slot/></span>
@@ -40,26 +26,11 @@
 
     <!-- <label class="form-check-label" for={name}><slot /></label> -->
 </div>
-
-<!-- <div class="form-control">
-	<label class="cursor-pointer label">
-		<span class="label-text">Remember me</span>
-		<input {id} {width} type="checkbox" checked={value} class="checkbox" />
-	</label>
-</div> -->
-
 {#if errorField}
     <div class="invalid-feedback">{errorField}</div>
 {/if}
 
 <style>
-    /* .checkbox-box:hover {
-        background: #03e9f4;
-        color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
-    } */
-
     .checkbox-box:clicked {
         background: #03e9f4;
         color: #fff;

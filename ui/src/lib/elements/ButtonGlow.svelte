@@ -1,13 +1,13 @@
 <script lang="ts">
-    import {createEventDispatcher} from 'svelte';
+    // import {createEventDispatcher} from 'svelte';
     import classNames from 'classnames';
 
     export let loading = false;
     export let type = 'button';
-    const dispatch = createEventDispatcher();
-    const handleClick = (e) => {
-        dispatch('click', e.target.click);
-    };
+    // const dispatch = createEventDispatcher();
+    // const handleClick = (e) => {
+    //     dispatch('click', e.target.click);
+    // };
 </script>
 
 <!-- interface Register = {((displayName = string),
@@ -17,7 +17,7 @@
 (autoLogin = autoLogin),
 (confirmPassword = confirmPassword))} -->
 
-<button {type} on:click={handleClick} class="button-box {{ classNames }}">
+<button {type} on:click class="button-box {{ classNames }}">
     <a href="#">
         {#if loading}
             <span/>

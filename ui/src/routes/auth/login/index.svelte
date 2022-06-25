@@ -93,7 +93,7 @@
                 type="email"
                 name="UserName"
                 value={userName}
-                required
+                required=true
         />
         <TextInput
                 placeholder="password"
@@ -101,9 +101,9 @@
                 type="password"
                 name="password"
                 value="password"
-                required
+                required=true
         />
-        <CheckBox className="checkbox-accent" name="rememberMe" bind:value={rememberMe} required
+        <CheckBox className="checkbox-accent" name="rememberMe" bind:value={rememberMe}
         >Remember Me
         </CheckBox>
         <div class="block mt-4 ">

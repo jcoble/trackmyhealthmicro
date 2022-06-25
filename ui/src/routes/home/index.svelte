@@ -26,16 +26,16 @@
         authCheck();
     });
 </script>
-<div>You are logged {!session ? 'out' : 'in' }</div>
-<div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
-    <div class="card-body">
-        <span class="font-bold text-lg">8 Items</span>
-        <span class="text-info">Subtotal: $999</span>
-        <div class="card-actions">
-            <button class="btn btn-primary btn-block">View cart</button>
-        </div>
-    </div>
-</div>
+
+<!--<div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">-->
+<!--    <div class="card-body">-->
+<!--        <span class="font-bold text-lg">8 Items</span>-->
+<!--        <span class="text-info">Subtotal: $999</span>-->
+<!--        <div class="card-actions">-->
+<!--            <button class="btn btn-primary btn-block">View cart</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!--        </div>-->
 <div class="dropdown dropdown-left">
     <div tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -53,8 +53,11 @@
 				<span class="badge">New</span>
 			</span>
         </li>
-        <li><a href="/settings">Settings</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="/auth/users/{session.userName}/profile">Profile</a></li>
+        //userName is their email
+        <li><a href="/auth/users/{session.userName}/settings">Settings</a></li>
+        <li><a href="/auth/users/{session.userName}/account">Account</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
         <li>
             <div class="">Theme</div>
             <!--                    <ThemeSwitcher/>-->

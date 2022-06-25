@@ -91,6 +91,7 @@
                     confirmPassword"
                     {responseStatus}
                     className="bg-transparent text-error-content text-error"
+                    required=true
             />
         </div>
         <TextInput
@@ -100,7 +101,7 @@
                 name="Email"
                 bind:value={email}
                 {responseStatus}
-                required
+                required=true
         />
         <TextInput
                 placeholder="Full Name"
@@ -109,7 +110,7 @@
                 name="DisplayName"
                 bind:value={displayName}
                 {responseStatus}
-                required
+                required=true
         />
         <TextInput
                 placeholder="Password"
@@ -118,7 +119,7 @@
                 name="Password"
                 bind:value={password}
                 {responseStatus}
-                required
+                required=true
         />
         <TextInput
                 placeholder="Confirm Password"
@@ -127,9 +128,9 @@
                 name="ConfirmPassword"
                 bind:value={confirmPassword}
                 {responseStatus}
-                required
+                required=true
         />
-        <CheckBox className="checkbox-accent" name="RememberMe" bind:value={autoLogin} required
+        <CheckBox className="checkbox-accent" name="RememberMe" bind:value={autoLogin}
         >Remember Me
         </CheckBox
         >
