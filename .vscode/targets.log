@@ -6,11 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
-
-# Make data base, printed on Sun Jun 19 01:30:55 2022
+# Make data base, printed on Sun Jun 26 11:34:17 2022
 
 # Variables
 
@@ -18,8 +15,6 @@ make: *** No rule to make target `all'.  Stop.
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 NVM_INC = /Users/jcmac/.nvm/versions/node/v18.3.0/include/node
 # automatic
@@ -41,26 +36,19 @@ WALLABY_PRODUCTION = true
 # makefile
 MAKEFILE_LIST := 
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
- 
 __CFBundleIdentifier = com.microsoft.VSCodeInsiders
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
 P9K_SSH = 0
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/pr/t9t1bbc955q5q0gr26ffg5lr0000gn/T/vscode-ipc-2ec9b9e4-57b5-47ae-bfaa-fd9728c95214.sock
-# environment
 VSCODE_CWD = /
 # environment
-PATH = /Users/jcmac/.nvm/versions/node/v18.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/jcmac/.dotnet/tools:/Users/jcmac/.dotnet/tools:/Users/jcmac/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/Users/jcmac/google-cloud-sdk/bin
+PATH = /Users/jcmac/Library/pnpm:/Users/jcmac/.nvm/versions/node/v18.3.0/bin:/opt/local/bin:/opt/local/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/opt/X11/bin:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/jcmac/.dotnet/tools:/Users/jcmac/.dotnet/tools:/Users/jcmac/Downloads/flutter/bin:/Users/jcmac/Library/Application Support/cloud-code/installer/google-cloud-sdk/bin:/Users/jcmac/google-cloud-sdk/bin
+# environment
+PNPM_HOME = /Users/jcmac/Library/pnpm
 # environment
 NVM_BIN = /Users/jcmac/.nvm/versions/node/v18.3.0/bin
-# environment
-LaunchInstanceID = DE2C92E2-DFD9-49AD-8B86-A5D5C9F4C3B6
-# environment
-VSCODE_LOG_STACK = true
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
@@ -68,15 +56,13 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 CLOUDSDK_METRICS_ENVIRONMENT = cloudcode.vscode
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.XYusCJkPpz/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.nQCm2td3zM/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.gKwLYw6Gew/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.pEYudfkFov/org.xquartz:0
 # environment
 CLOUDSDK_METRICS_ENVIRONMENT_VERSION = 1.18.3
-# environment
-VSCODE_PIPE_LOGGING = true
 # environment
 PWD = /Users/jcmac/mainrepos/trackmyhealthmicro
 # environment
@@ -92,7 +78,7 @@ HOME = /Users/jcmac
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/jcmac/Library/Application Support/Code - Insiders/CachedData/fbf1cf3832d43088e27837dbb68d24ab65a098c1
+VSCODE_CODE_CACHE_PATH = /Users/jcmac/Library/Application Support/Code - Insiders/CachedData/173f4bea73601a31859372b409cac2c20fa91194
 # environment
 LOGNAME = jcmac
 # environment
@@ -140,7 +126,7 @@ MFLAGS = -Rrqp
 # environment
 NVM_DIR = /Users/jcmac/.nvm
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.7114807.7114813
+XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.8237871.8237877
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -159,8 +145,6 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 1881c
 # automatic
 ^F = $(notdir $^)
 # default
@@ -172,9 +156,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 62646
+VSCODE_PID = 57680
 # variable set hash-table stats:
-# Load=79/1024=8%, Rehash=0, Collisions=1/100=1%
+# Load=73/1024=7%, Rehash=0, Collisions=1/94=1%
 
 # Pattern-specific Variable Values
 
@@ -182,7 +166,7 @@ VSCODE_PID = 62646
 
 # Directories
 
-# . (device 16777234, inode 2851311): 15 files, no impossibilities.
+# . (device 16777233, inode 2851311): 15 files, no impossibilities.
 
 # 15 files, no impossibilities in 1 directories.
 
@@ -256,6 +240,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sun Jun 19 01:30:55 2022
+# Finished Make data base on Sun Jun 26 11:34:17 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+
