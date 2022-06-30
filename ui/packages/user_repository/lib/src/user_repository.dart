@@ -1,17 +1,17 @@
 import 'dart:async';
 
-import 'package:uuid/uuid.dart';
-
-import 'models/models.dart';
+import 'package:user_repository/src/models/models.dart';
 
 class UserRepository {
   User? _user;
 
   Future<User?> getUser() async {
-    if (_user != null) return _user;
+    if (_user != null) {
+      return _user;
+    }
     return Future.delayed(
-      const Duration(milliseconds: 300),
-      () => _user = User(const Uuid().v4()),
-    );
+        // get user from api
+
+        );
   }
 }

@@ -1,5 +1,5 @@
 /* Options:
-Date: 2022-06-28 15:53:30
+Date: 2022-06-28 18:56:07
 Version: 6.10
 Tip: To override a DTO option, remove "//" prefix before updating
 BaseUrl: https://localhost:5001
@@ -7,14 +7,14 @@ BaseUrl: https://localhost:5001
 GlobalNamespace: dtos
 AddServiceStackTypes: True
 AddResponseStatus: True
-//AddImplicitVersion: 
+//AddImplicitVersion:
 //AddDescriptionAsComments: True
-//IncludeTypes: 
-//ExcludeTypes: 
+//IncludeTypes:
+//ExcludeTypes:
 //DefaultImports: package:servicestack/servicestack.dart
 */
 
-library dtos;
+// library dtos;
 
 import 'package:servicestack/servicestack.dart';
 
@@ -3159,7 +3159,7 @@ class PatchSchedules implements IReturn<IdResponse>, IPatch, IPatchDb<Schedules>
     scheduleTime = JsonConverters.fromJson(json['scheduleTime'], 'DateTime', context!);
     startDate = JsonConverters.fromJson(json['startDate'], 'DateTime', context!);
     endDate = JsonConverters.fromJson(json['endDate'], 'DateTime', context!);
-    treatmentId = json['treatmentId'];
+    treatmentId = json["treatmentId"];
     treatmentName = json['treatmentName'];
     isWeekendDifferent = json['isWeekendDifferent'];
     appointmentId = json['appointmentId'];

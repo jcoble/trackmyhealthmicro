@@ -48,11 +48,9 @@ class _AppViewState extends State<AppView> {
   NavigatorState get _navigator => _navigatorKey.currentState!;
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      navigatorKey: _navigatorKey,
-      builder: (context, child) {
-        return BlocListener<AuthenticationBloc, AuthenticationState>(
+  Widget build(BuildContext context) => MaterialApp(
+        navigatorKey: _navigatorKey,
+        builder: (context, child) => BlocListener<AuthenticationBloc, AuthenticationState>(
           listener: (context, state) {
             switch (state.status) {
               case AuthenticationStatus.authenticated:
@@ -72,9 +70,7 @@ class _AppViewState extends State<AppView> {
             }
           },
           child: child,
-        );
-      },
-      onGenerateRoute: (_) => SplashPage.route(),
-    );
-  }
+        ),
+        onGenerateRoute: (_) => SplashPage.route(),
+      );
 }

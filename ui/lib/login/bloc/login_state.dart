@@ -15,13 +15,12 @@ class LoginState extends Equatable {
     FormzStatus? status,
     Username? username,
     Password? password,
-  }) {
-    return LoginState(
-      status: status ?? this.status,
-      username: username ?? this.username,
-      password: password ?? this.password,
-    );
-  }
+  }) =>
+      LoginState(
+        status: status ?? this.status,
+        username: username ?? this.username,
+        password: password ?? this.password,
+      );
 
   @override
   List<Object> get props => [status, username, password];
